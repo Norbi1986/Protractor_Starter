@@ -41,4 +41,37 @@ export class MainPage {
       let destinationTitle = element(by.css('.destination-title-section .qa-page-heading')).getText();
       return destinationTitle;
   }
+
+
+  clickOnWhereToField() {
+    element(by.css('#goingTo')).click();
+  }
+
+  writeIntoWhereToField(city) {
+    element(by.css('#goingTo input')).clear();
+    element(by.css('#goingTo input')).sendKeys(city,protractor.Key.ENTER);
+
+  }
+
+  clickOnFlyingFromField() {
+    element(by.css('#departingFrom')).element(by.model('selectedDepartureGateway')).click();
+    browser.sleep(2000);
+  }
+
+  selectFlyingFromOption(city){
+    let cities = element.all(by.options('departureGateway.description for departureGateway in gateways track by departureGateway.description'));
+    cities.count().then((number)=>{
+        for (let i = 0; i < number; i++) {
+            cities.get(i).getText().then((value) => {
+                if(value === city) {
+                   cities.get(i).click();
+                }
+            });
+        }
+    });
+  }
+
+  clickOnFindHolidays() {
+    element(by.name('holidaySearchForm')).element(by.css('.search-panel-form .submit-container button')).click();
+  }
 }

@@ -31,4 +31,24 @@ export class MainStep  {
 		let destinationTitle = mainPage.getDestinationTitle();
 		expect(destinationTitle).to.eventually.equal(name);
 	}
+
+	clickOnWhereToField() {
+		mainPage.clickOnWhereToField();
+	}
+
+	writeIntoWhereToField(dest) {
+		mainPage.writeIntoWhereToField(dest);
+	}
+
+	clickOnFlyingFrom() {
+		mainPage.clickOnFlyingFromField();
+	}
+
+	selectFlyingFrom(city) {
+		mainPage.selectFlyingFromOption(city);
+	}
+
+	clickOnFindHoldaysButton() {
+		mainPage.clickOnFindHolidays();
+	}
 }

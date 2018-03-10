@@ -1,14 +1,14 @@
-use strict'
 
-/*class SearchResultPage {
+export class SearchResultPage {
+	constructor() { }
 
-  scrollDown() {
-    browser.sleep(4000);
-    var javaScript = 'var elem = document.getElementById("sharedFooter");var rect = elem.getBoundingClientRect();window.scroll(0, rect.top);'
-    browser.executeScript(javaScript);
-    browser.sleep(2000);
+	waitForElement() {
+		let until = protractor.ExpectedConditions;
+		browser.wait(until.presenceOf(this.checkSearchResultPageIsAppeared()), 10000, 'Element taking too long to appear in the DOM');
+	}
 
-  }
+	checkSearchResultPageIsAppeared() {
+		return element(by.css('.main-content .search-result-list'));
+	}
+
 }
-
-module.exports = SearchResultPage;*/
