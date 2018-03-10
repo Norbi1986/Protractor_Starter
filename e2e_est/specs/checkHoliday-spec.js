@@ -6,7 +6,7 @@ import {SearchResultStep} from '../steps/SearchResultStep.js';
 import {DetailsStep} from '../steps/DetailsStep.js';
 
 
-describe('Basic tests for angular', () => {
+/*describe('Basic tests for angular', () => {
     let mainPage;
     let mainStep;
     let searchResultStep;
@@ -68,7 +68,7 @@ describe('Basic tests for angular', () => {
     });
 
 });
-
+*/
 describe('Basic tests for angular', () => {
     let mainPage;
     let mainStep;
@@ -88,10 +88,10 @@ describe('Basic tests for angular', () => {
     });
 
     it('Select Find Tour', () => {
-        mainStep.clickOnTourButton();
-        mainStep.clickOnWherToFieldAtTour();
-        mainStep.selectWherToAtTours("Canada");
+
         mainStep.clickOnSearchTourButton();
+        searchResultStep.clickOnSelectedNumberOfCheckbox(1);
+        searchResultStep.checkTheSelectedNumberOfCheckboxIsChecked(1);
     });
 
 });

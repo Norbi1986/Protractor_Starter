@@ -30,5 +30,18 @@ export class SearchResultPage {
 	 	//holidays.get(num).element(by.css('.more-details')).click();
 	 	element.all(by.css('.listView .holiday .more-details')).first().click();
   	}
+
+  	clickOnCheckboxOnTours(number) {
+  		let checkBoxesForTour = element.all(by.css('.filter-group .tick'));
+  		checkBoxesForTour.get(number).click();
+  	}
+
+
+  	selectedNumberOfCheckboxIsChecked(number) {
+  		browser.sleep(2000);
+  		let checkBoxesForTour = element.all(by.css('.filter-group .tick'));
+  		return checkBoxesForTour.get(number).isSelected();
+  	}
+
   	
 }
