@@ -3,14 +3,32 @@
 
 import {expect} from '../steps/BaseStep.js';
 import {MainPage} from '../pages/MainPage.js';
+let mainPage = new MainPage();
 
 export class MainStep  {
 	constructor() {
 		}
 
-	iCanSeeTheFollowingText() {
-		let mainPage = new MainPage();
+	iCanSeeTheVirginPageIsOpened() {
+		let title = mainPage.checkThePageisOpened();
+		expect(title).to.eventually.equal("All Inclusive & Package Holidays | Virgin Holidays");
+	}
+
+	iCanSeeTheFollowingText(text) {
 		let logo = mainPage.getLogo();
-		expect(logo).to.eventually.equal("Customer support");
+		expect(logo).to.eventually.equal(text);
+	}
+
+	clickOnDestinationTab() {
+		mainPage.clickOnDestinationTab();
+	}
+
+	clickOnSelectedSubMenuOnDestination(name) {
+		mainPage.clickOnDestinationSubMenu(name);
+	}
+
+	checkSelectedDestenationTitle(name) {
+		let destinationTitle = mainPage.getDestinationTitle();
+		expect(destinationTitle).to.eventually.equal(name);
 	}
 }
