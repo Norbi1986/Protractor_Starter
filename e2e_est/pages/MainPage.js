@@ -49,11 +49,12 @@ export class MainPage {
 
   writeIntoWhereToField(city) {
     element(by.css('#goingTo input')).clear();
-    element(by.css('#goingTo input')).sendKeys(city,protractor.Key.ENTER);
-
+    element(by.css('#goingTo input')).sendKeys(city);
+    element(by.css('#goingTo input')).sendKeys(protractor.Key.ENTER);
   }
 
   clickOnFlyingFromField() {
+    browser.sleep(2000);
     element(by.css('#departingFrom')).element(by.model('selectedDepartureGateway')).click();
     browser.sleep(2000);
   }
@@ -73,5 +74,41 @@ export class MainPage {
 
   clickOnFindHolidays() {
     element(by.name('holidaySearchForm')).element(by.css('.search-panel-form .submit-container button')).click();
+  }
+
+  clickOnToursButton() {
+    element(by.css('.qa_tours_button')).click();
+  }
+
+// FOR PRACTICE
+
+  clickOnTourButton() {
+    element(by.css('.qa_tours_button')).click();
+  }
+
+  clickOnWherToFieldAtTour() {
+    element(by.css('.qa_depFrom')).click();
+  }
+
+  selectWherToAtTours(countryName) {
+    let countries = element.all(by.options('departureGateway.description for departureGateway in gateways track by departureGateway.description'));
+    countries.count().then((number)=>{
+        for (let i = 0; i < number; i++) {
+            countries.get(i).getText().then((value) => {
+                if(value === countryName) {
+                   countries.get(i).click();
+                }
+            });
+        }
+    });
+  }
+
+  getWherToAtToursField() {
+      let countryName = element(by.css('.qa_depFrom')).getText();
+      return countryName
+  }
+
+  clickOnSearchButton() {
+      element(by.css('.search-button')).click();
   }
 }

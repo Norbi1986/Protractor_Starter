@@ -16,4 +16,10 @@ export class SearchResultStep {
 		let element = searchResultPage.checkSearchResultPageIsAppeared();
 		expect(element.isDisplayed()).to.eventually.be.true;
 	}
+
+	//FOR Practice
+
+	clickOnSelectedMoreDetailsButton() {
+		searchResultPage.clickOnSelectedMoreDetailsButton();
+	}
 }
