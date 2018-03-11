@@ -19,8 +19,8 @@ export class SearchResultStep {
 
 	//FOR Practice
 
-	clickOnSelectedMoreDetailsButton() {
-		searchResultPage.clickOnSelectedMoreDetailsButton();
+	clickOnSelectedMoreDetailsButton(hotelName) {
+		searchResultPage.clickOnSelectedMoreDetailsButton(hotelName);
 	}
 
 	clickOnSelectedNumberOfCheckbox(number) {
@@ -30,5 +30,9 @@ export class SearchResultStep {
 	checkTheSelectedNumberOfCheckboxIsChecked(number) {
 		let isSelected = searchResultPage.selectedNumberOfCheckboxIsChecked(number);
 		expect(isSelected).to.eventually.be.true;
+	}
+	
+	clickOnViewMoreButton() {
+		searchResultPage.clickOnViewMoreButton();
 	}
 }

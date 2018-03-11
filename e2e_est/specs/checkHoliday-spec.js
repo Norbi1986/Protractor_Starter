@@ -6,7 +6,7 @@ import {SearchResultStep} from '../steps/SearchResultStep.js';
 import {DetailsStep} from '../steps/DetailsStep.js';
 
 
-/*describe('Basic tests for angular', () => {
+describe('Basic tests for angular', () => {
     let mainPage;
     let mainStep;
     let searchResultStep;
@@ -63,12 +63,12 @@ describe('Basic tests for angular', () => {
         mainStep.selectFlyingFrom("Edinburgh");
         mainStep.clickOnFindHoldaysButton();
         searchResultStep.theResultPageIsVisible();
-        searchResultStep.clickOnSelectedMoreDetailsButton();
-        //detailsStep.checkHotelName("Savannah Beach");
+        searchResultStep.clickOnSelectedMoreDetailsButton("Savannah Beach");
+        detailsStep.checkHotelName("Savannah Beach");
     });
 
 });
-*/
+
 describe('Basic tests for angular', () => {
     let mainPage;
     let mainStep;
@@ -92,6 +92,7 @@ describe('Basic tests for angular', () => {
         mainStep.clickOnSearchTourButton();
         searchResultStep.clickOnSelectedNumberOfCheckbox(1);
         searchResultStep.checkTheSelectedNumberOfCheckboxIsChecked(1);
+        searchResultStep.clickOnViewMoreButton();
     });
 
 });
