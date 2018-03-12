@@ -18,6 +18,9 @@ describe('Basic tests for angular', () => {
         detailsStep = new DetailsStep();
         mainPage.openPage();
     });
+    afterAll(() => {
+         browser.close(); 
+    }); 
 
     it('Open virgin holidays page and check it', () => {
         mainStep.iCanSeeTheVirginPageIsOpened();
@@ -53,8 +56,14 @@ describe('Practice Test for find tour', () => {
         mainStep = new MainStep();
         searchResultStep = new SearchResultStep();
         detailsStep = new DetailsStep();
+        browser.restart();
         mainPage.openPage();
     });
+    
+    afterAll(() => {
+         browser.close(); 
+    });
+
     it('Check Find Tours option', () => {
         mainStep.clickOnTourButton();
         mainStep.clickOnWherToFieldAtTour();
@@ -81,10 +90,14 @@ describe('Practice Test for find holidays', () => {
         mainStep = new MainStep();
         searchResultStep = new SearchResultStep();
         detailsStep = new DetailsStep();
+        browser.restart();
         mainPage.openPage();
     });
+    afterAll(() => {
+         browser.close(); 
+    });
 
-     it('Find holidays and select one by name', () => {
+    it('Find holidays and select one by name', () => {
         mainStep.clickOnWhereToField();
         mainStep.writeIntoWhereToField("Caribbean");
         mainStep.clickOnFlyingFrom();
