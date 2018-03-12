@@ -11,4 +11,27 @@ exports.config = {
 		isVerbose: false,
 		includeStackTrace: false
 	},
+	/*multiCapabilities: [{
+        name: 'normal',
+       	browserName: 'chrome',
+       	//browserName: 'MicrosoftEdge',
+       	//browserName: 'firefox',
+      	//marionette : true,
+        maxInstances: 2,
+        shardTestFiles: true,
+        chromeOptions: {
+            args: ['show-fps-counter=true', '--window-size=1024,768']
+        }
+    }],*/
+    /*capabilities: {
+        browserName: "chrome",
+        chromeOptions: {
+            args: [
+                "--headless",
+                "--disable-gpu",
+                "--window-size=800,600"
+            ]
+        }
+    }*/
+    
 };
