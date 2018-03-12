@@ -5,6 +5,7 @@ export class MainPage {
   openPage() {
     browser.get('https://www.virginholidays.co.uk/');
     browser.driver.manage().window().maximize();
+   // browser.manage().timeouts().implicitlyWait(10000);
     browser.waitForAngular();
   }
 
@@ -20,7 +21,6 @@ export class MainPage {
 
   clickOnDestinationTab() {
     browser.actions().mouseMove(element(by.css('.main-menu.mega-menu-desktop .zero-level-0'))).perform();
-    browser.sleep(2000);
   }
 
   clickOnDestinationSubMenu(name) {
@@ -54,9 +54,7 @@ export class MainPage {
   }
 
   clickOnFlyingFromField() {
-    browser.sleep(2000);
     element(by.css('#departingFrom')).element(by.model('selectedDepartureGateway')).click();
-    browser.sleep(2000);
   }
 
   selectFlyingFromOption(city){

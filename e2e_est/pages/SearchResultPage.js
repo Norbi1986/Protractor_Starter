@@ -43,7 +43,8 @@ export class SearchResultPage {
   		/*browser.sleep(2000);
   		var EC = protractor.ExpectedConditions;
   		browser.wait(EC.visibilityOf(checkBoxesForTour), 10000);*/
-  		let checkBoxesForTour = element(by.xpath('(//*[contains(@class, \'hierarchy-filter\')]//input)['+number +']'));
+  		let index = number + 1;
+  		let checkBoxesForTour = element(by.xpath('(//*[contains(@class, \'hierarchy-filter\')]//input)['+index+']'));
   		return checkBoxesForTour.isSelected();
   	}
 

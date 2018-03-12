@@ -19,7 +19,6 @@ describe('Basic tests for angular', () => {
         mainPage.openPage();
     });
 
-
     it('Open virgin holidays page and check it', () => {
         mainStep.iCanSeeTheVirginPageIsOpened();
         mainStep.iCanSeeTheFollowingText("Customer support");
