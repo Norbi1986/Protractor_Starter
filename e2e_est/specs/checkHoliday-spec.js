@@ -42,33 +42,8 @@ describe('Basic tests for angular', () => {
 });
 
     //FOR PRACTICE
-describe('Basic tests for angular', () => {
-    let mainPage;
-    let mainStep;
-    let searchResultStep;
-    let detailsStep;
-    beforeAll(() =>{
-        mainPage = new MainPage();
-        mainStep = new MainStep();
-        searchResultStep = new SearchResultStep();
-        detailsStep = new DetailsStep();
-        mainPage.openPage();
-    });
 
-     it('Find holidays and select one', () => {
-        mainStep.clickOnWhereToField();
-        mainStep.writeIntoWhereToField("Caribbean");
-        mainStep.clickOnFlyingFrom();
-        mainStep.selectFlyingFrom("Edinburgh");
-        mainStep.clickOnFindHoldaysButton();
-        searchResultStep.theResultPageIsVisible();
-        searchResultStep.clickOnSelectedMoreDetailsButton("Savannah Beach");
-        detailsStep.checkHotelName("Savannah Beach");
-    });
-
-});
-
-describe('Basic tests for angular', () => {
+describe('Practice Test for find tour', () => {
     let mainPage;
     let mainStep;
     let searchResultStep;
@@ -92,6 +67,32 @@ describe('Basic tests for angular', () => {
         searchResultStep.clickOnSelectedNumberOfCheckbox(1);
         searchResultStep.checkTheSelectedNumberOfCheckboxIsChecked(1);
         searchResultStep.clickOnViewMoreButton();
+    });
+
+});
+
+describe('Practice Test for find holidays', () => {
+    let mainPage;
+    let mainStep;
+    let searchResultStep;
+    let detailsStep;
+    beforeAll(() =>{
+        mainPage = new MainPage();
+        mainStep = new MainStep();
+        searchResultStep = new SearchResultStep();
+        detailsStep = new DetailsStep();
+        mainPage.openPage();
+    });
+
+     it('Find holidays and select one by name', () => {
+        mainStep.clickOnWhereToField();
+        mainStep.writeIntoWhereToField("Caribbean");
+        mainStep.clickOnFlyingFrom();
+        mainStep.selectFlyingFrom("Edinburgh");
+        mainStep.clickOnFindHoldaysButton();
+        searchResultStep.theResultPageIsVisible();
+        searchResultStep.clickOnSelectedMoreDetailsButton("Savannah Beach");
+        detailsStep.checkHotelName("Savannah Beach");
     });
 
 });

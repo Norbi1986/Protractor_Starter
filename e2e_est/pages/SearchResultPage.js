@@ -12,25 +12,25 @@ export class SearchResultPage {
 	}
 
 	//FOR Practice
-	 
-	 clickOnSelectedMoreDetailsButton(hotelName) {
+
+	clickOnSelectedMoreDetailsButton(hotelName) {
 	 	let holidays = element.all(by.css('.listView .holiday'));
-	 	let numberOfIndex;
-	 	let num = element.all(by.css('.listView .holiday')).count().then((numberOfHolidays)=>{
-	 		for(let i = 0; i < numberOfHolidays; i++) {		
-	 			let currentHotelName = holidays.get(i).element(by.css('.hotel-name')).getText().then((name)=>{
+	 	let isClicked = false;
+	 	element.all(by.css('.listView .holiday')).count().then((numberOfHolidays)=>{
+	 		return numberOfHolidays;
+	 	}).then((numberOfHolidays)=>{
+	 		let selectedeHotelIndex = [];
+	 		for(let i = 0; i < numberOfHolidays; i++) {	
+	 			holidays.get(i).element(by.css('.hotel-name')).getText().then((name)=>{
 	 				if(name === hotelName) {
-	 					return name;
+	 					selectedeHotelIndex.push(i);
 	 				}
 	 			});
-	 			if (currentHotelName !== '') {
-	 				return i;
-	 				break;
-	 				}
 	 		}
-	 	});
-	 	holidays.get(num).element(by.css('.more-details')).click();
-	 	browser.sleep(5000);
+	 		return selectedeHotelIndex;
+	 	}).then((selectedeHotelIndex)=>{
+	 		holidays.get(selectedeHotelIndex[0]).element(by.css('.more-details')).click();
+	 	}); 	
   	}
 
   	clickOnCheckboxOnTours(number) {
@@ -51,6 +51,4 @@ export class SearchResultPage {
   	clickOnViewMoreButton() {
   		element(by.css('.tour-activity .btn-primary')).click();
   	}
-
-  	
 }
