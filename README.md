@@ -1,26 +1,26 @@
 ﻿Protractor Jasmine chai-as-promise Starter and example
 
 Prepare:
-	#### Download NodeJS
+#### Download NodeJS
 	1. Download NodeJS from https://nodejs.org/en/
 
-	#### Install Protractor
+#### Install Protractor
 	2. Write the following command into the command promp or terminal: ```npm install -g protractor```
 
-	#### Update the selenium webDrivers
+#### Update the selenium webDrivers
 	3. Write the following command into the command promp or terminal: ```webdriver-manager update```
 
-	#### Start the drivers
+#### Start the drivers
 	4. Write the following command into the command promp or terminal: ```webdriver-manager start```
 
-	#### Clone source code for testing
+#### Clone source code for testing
 	5. Clone this repository
 	6. Navigate to the folder
 
-	#### Install all npm packages
+#### Install all npm packages
 	7. Write the following command into the command promp or terminal: ```npm install```
 
-	#### Run the protractor tests
+#### Run the protractor tests
 	8. Run Protractor test: ```protractor protractor.config.js```
 
 #### Free the 4444 port
