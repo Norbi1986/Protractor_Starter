@@ -2,16 +2,16 @@
 
 Prepare:
 #### Download NodeJS
-*	1. Download NodeJS from https://nodejs.org/en/
+	1. Download NodeJS from https://nodejs.org/en/
 
 #### Install Protractor
-*	2. Write the following command into the command promp or terminal:
+	2. Write the following command into the command promp or terminal:
 ```
 npm install -g protractor
 ```
 
 #### Update the selenium webDrivers
-*	3. Write the following command into the command promp or terminal:
+	3. Write the following command into the command promp or terminal:
 ```
 webdriver-manager update
 ```
@@ -23,17 +23,17 @@ webdriver-manager start
 ```
 
 #### Clone source code for testing
-*	5. Clone this repository
-*	6. Navigate to the folder
+	5. Clone this repository
+	6. Navigate to the folder
 
 #### Install all npm packages
-*	7. Write the following command into the command promp or terminal: 
+	7. Write the following command into the command promp or terminal: 
 ```
 npm install
 ```
 
 #### Run the protractor tests
-*	8. Run Protractor test:
+	8. Run Protractor test:
 ```
 protractor protractor.config.js
 ```
