@@ -17,22 +17,5 @@ export class SearchResultStep {
 		expect(element.isDisplayed()).to.eventually.be.true;
 	}
 
-	//FOR Practice
-
-	clickOnSelectedMoreDetailsButton(hotelName) {
-		searchResultPage.clickOnSelectedMoreDetailsButton(hotelName);
-	}
-
-	clickOnSelectedNumberOfCheckbox(number) {
-		searchResultPage.clickOnCheckboxOnTours(number);
-	}
-
-	checkTheSelectedNumberOfCheckboxIsChecked(number) {
-		let isSelected = searchResultPage.selectedNumberOfCheckboxIsChecked(number);
-		expect(isSelected).to.eventually.be.true;
-	}
-	
-	clickOnViewMoreButton() {
-		searchResultPage.clickOnViewMoreButton();
-	}
+	// START CODE HERE
 }

@@ -52,25 +52,6 @@ export class MainStep  {
 		mainPage.clickOnFindHolidays();
 	}
 
-// FOR PRACTICE
+// START CODE HERE
 
-	clickOnTourButton() {
-		mainPage.clickOnTourButton();
-	}
-	clickOnWherToFieldAtTour() {
-		mainPage.clickOnWherToFieldAtTour();
-	}
-
-	selectWherToAtTours(countryName){
-		mainPage.selectWherToAtTours(countryName);
-	}
-
-	checkWherToAtToursField(countryName) {
-		let country = mainPage.getWherToAtToursField();
-		expect(country).to.eventually.equal(countryName);
-	}
-
-	clickOnSearchTourButton() {
-		mainPage.clickOnSearchButton();
-	}
 }

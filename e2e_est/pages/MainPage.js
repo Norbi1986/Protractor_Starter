@@ -78,35 +78,5 @@ export class MainPage {
     element(by.css('.qa_tours_button')).click();
   }
 
-// FOR PRACTICE
-
-  clickOnTourButton() {
-    element(by.css('.qa_tours_button')).click();
-  }
-
-  clickOnWherToFieldAtTour() {
-    element(by.css('.qa_depFrom')).click();
-  }
-
-  selectWherToAtTours(countryName) {
-    let countries = element.all(by.options('departureGateway.description for departureGateway in gateways track by departureGateway.description'));
-    countries.count().then((number)=>{
-        for (let i = 0; i < number; i++) {
-            countries.get(i).getText().then((value) => {
-                if(value === countryName) {
-                   countries.get(i).click();
-                }
-            });
-        }
-    });
-  }
-
-  getWherToAtToursField() {
-      let countryName = element(by.css('.qa_depFrom')).getText();
-      return countryName
-  }
-
-  clickOnSearchButton() {
-      element(by.css('.search-button')).click();
-  }
+  // START CODE HERE
 }
